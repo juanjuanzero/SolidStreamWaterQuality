@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SolidStream.Models.SiteModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.SiteID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.SiteID }) |
+            @Html.ActionLink("Site Visits", "SiteSpecificVisits", "SiteVisitModels" , new { id = item.SiteID }, new { } )  |
+            @Html.ActionLink("Delete", "Delete", new { id = item.SiteID })
+        </td>
+    </tr>
+}
+
+</table>

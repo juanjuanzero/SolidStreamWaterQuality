@@ -1,0 +1,96 @@
+﻿@model SolidStream.Models.SiteVisitModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SiteVisitModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecCond)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecCond)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DissolvedOxygen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DissolvedOxygen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateSetting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateSetting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SondeSetting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SondeSetting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiteID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

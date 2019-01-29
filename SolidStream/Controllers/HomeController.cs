@@ -8,6 +8,7 @@ namespace SolidStream.Controllers
 {
     public class HomeController : Controller
     {
+        //This controller controls the actions done through the Home Object
         public ActionResult Index()
         {
             return View();

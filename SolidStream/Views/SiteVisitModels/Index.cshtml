@@ -1,0 +1,81 @@
+﻿@model IEnumerable<SolidStream.Models.SiteVisitModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecCond)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DissolvedOxygen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateSetting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SondeSetting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Temperature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecCond)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DissolvedOxygen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateSetting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SondeSetting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SiteVisitID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SiteVisitID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SiteVisitID })
+        </td>
+    </tr>
+}
+
+</table>

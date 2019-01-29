@@ -1,0 +1,90 @@
+﻿@model SolidStream.Models.SiteVisitModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SiteVisitModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecCond)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecCond)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DissolvedOxygen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DissolvedOxygen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateSetting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateSetting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SondeSetting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SondeSetting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiteID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SiteVisitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
